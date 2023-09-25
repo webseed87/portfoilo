@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+@import './font.css';
+
+/* 리셋 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+display: block;
+}
+*[hidden] {
+display: none;
+}
+body {
+line-height: 1;
+}
+menu, ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	overflow: visible;
+	cursor: pointer;
+	line-height: 1;
+}
+
+a {
+	text-decoration: none !important;
+	cursor: pointer;
+	color: #383843;
+	vertical-align: baseline;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+legend,
+caption {
+	display: none;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+address,
+i,
+em {
+	font-style: normal;
+}
+
+/* 페이지 디자인 시작 */
+body{
+font-family: 'Krub', sans-serif;  
+--color-bg:#181818;
+--color-white:#fff;
+--color-point:#A460F9;
+--color-gary: #4b4b4b;
+background-color: var(--color-bg);
+box-sizing: border-box;
+}
+.header {
+padding: 1vw 2vw;
+display: flex;
+justify-content: space-between;
+}
+.header .logo{
+	position: relative;
+}
+.header .logo a{
+font-size: 2vw;
+color: var(--color-white);
+display: block;
+flex-grow: 1;
+line-height: 3vw;
+}
+.header .logo a::after{
+content: "";
+background-color: var(--color-point);
+width: 12px;
+height: 12px;
+position: absolute;
+border-radius: 50%;
+bottom: 10px;
+right: -4px;
+z-index: -1;
+}
+.header .menu ul{
+	display: flex;
+}
+.header .menu ul li{
+	line-height: 3vw;
+	margin-right: 30px;
+}
+.header .menu ul li:last-child{
+	margin-right: 0px;	
+}
+.header .menu ul li a{
+font-size: 1.2vw;
+color: var(--color-white);	
+}
+main{
+display: flex;
+justify-content: center;
+height: 90vh;
+flex-wrap: wrap;
+}
+main .arrow{
+	margin-top: 80px;
+}
+.main{
+position:absolute;
+top: 0;
+padding:50px;
+width: 800px;
+height: 800px;
+border-radius:50%;
+border: 1px solid var(--color-white);
+animation: spin 10s infinite linear;	
+}
+.main .ellipse{
+display:inline-block;
+background:var(--color-point);
+width:12px;
+height:12px;
+border-radius:50%;
+animation: anti-spin 10s infinite linear;
+color:#fff;
+position:absolute;
+text-align: center;
+}
+.main .ellipse.ball1{
+left:125px;
+top:125px;
+}
+.main .ellipse.ball2{
+right:125px;
+bottom:125px;
+}
+main .regular{
+font-weight: 400;	
+}
+main p{
+margin-top: 16vh;
+color: var(--color-white);
+text-align: center;
+font-size: 5.4vw;
+font-weight: 700;
+padding: 2vw;
+line-height: 6vw;
+width: 49vw;
+z-index: 10;
+}
+.job{
+color: var(--color-point);
+}
+.arrow{animation: arrow 1s infinite linear;}
+#about {
+	display: flex;
+	padding: 1vw 2vw;
+	flex-wrap: wrap;
+	position: relative;
+}
+#about h2{
+	width: 100%;
+	display: flex;
+font-size: 3vw;
+color: var(--color-gary);	
+margin-top: 10vh;
+font-weight: 700;
+}
+#about ul {
+flex-grow: 1;
+}
+#about ul li{
+padding-bottom: 30px;
+color: var(--color-white);
+font-size: 1.7vw;
+
+}
+#about .profil{
+width:402px;
+height: 465px;	
+}
+#about .rotatetext{
+position: relative;
+right: 50px;
+bottom: 250px;
+}
+
+.textcircle {
+transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+transform-origin: center;
+}
+.profilbox{
+	padding-right: 5vw;
+}
+ 
+text {
+font-size: 18px;
+font-weight: 500;
+text-transform: uppercase;
+font-variant-ligatures: none;
+fill: white;
+letter-spacing: 5px;
+font-family: 'Krub', sans-serif;  
+animation: rotate 20s linear infinite;
+transform-origin: center;
+}
+
+@keyframes rotate {
+to {
+	transform: rotate(360deg);
+}
+}
+@keyframes arrow{
+0%{transform: translate(0, -10px) ;}	
+100%{transform: translate(0, 0px) ;}	
+}
+@keyframes spin{
+0%{transform:rotate(20deg) scaleY(.5) rotate(0deg);}
+100%{transform:rotate(20deg) scaleY(.5) rotate(360deg);}
+}
+@keyframes anti-spin{
+0%{transform:rotate(0deg) scaleY(2) rotate(20deg) scale(1);}
+100%{transform:rotate(-360deg) scaleY(2) rotate(20deg) scale(1);}
+}
