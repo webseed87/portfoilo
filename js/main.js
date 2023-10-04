@@ -96,3 +96,95 @@ const adjective = [
   
 
   next(fx1, job);
+
+//네비바 관련 부분
+
+  window.addEventListener('scroll', function() {
+	let scrollY = window.scrollY;
+	var header = document.querySelector('.header');
+	let headerheight = header.clientHeight;
+	if (scrollY >= headerheight) {
+		header.classList.add('scroll');
+	  
+	}
+	else{
+		header.classList.remove('scroll');
+	}
+  });
+
+
+
+const menuItems = document.querySelectorAll('li a');
+const section = document.querySelectorAll('.section');
+const headerHeight = document.querySelector('.header').offsetHeight;
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  section.forEach((section) => {
+    const sectionId = section.getAttribute('id');
+    const sectionTop = section.offsetTop - headerHeight;
+    const sectionHeight = section.clientHeight;
+
+    // 스크롤 위치가 섹션 범위 내에 있는지 확인
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight ) {
+      // 현재 보이는 섹션과 연결된 네비게이션 항목을 찾기
+      const menuItem = document.querySelector(`li a[href="#${sectionId}"]`);
+      if (menuItem) {
+        menuItem.classList.add('color');
+      }
+    } else {
+      // 스크롤 위치가 섹션 범위 밖에 있는 경우 "color" 클래스를 제거
+      const menuItem = document.querySelector(`li a[href="#${sectionId}"]`);
+      if (menuItem) {
+        menuItem.classList.remove('color');
+      }
+    }
+  });
+});
+
+
+$(function () {
+	if (window.innerWidth > 720) {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	let sections = gsap.utils.toArray(".panel");
+  	let headerHeight = document.querySelector(".header").offsetHeight + 100;
+  
+	gsap.to(sections, {
+	  xPercent: -100 * (sections.length - 1),
+	  ease: "none",
+	  scrollTrigger: {
+		trigger: ".silder",
+		pin: true,
+		scrub: 1,
+		snap: 1 / (sections.length - 1),
+		end: () => "+=" + document.querySelector(".silder").offsetWidth,
+			start: "top top+=" + headerHeight + " #portfoilo", // Adjust the target as needed
+	  },
+	});
+	}
+});
+
+
+$(document).ready(function() {
+
+
+    $(".flip-container").mouseenter(function() {
+      $(this).find(".flipper").css("transform", "rotateY(180deg)");
+    });
+
+    $(".flip-container").mouseleave(function() {
+      $(this).find(".flipper").css("transform", "rotateY(0deg)");
+    });
+	$(".arrow_next").on("click",function(){
+		$(".about_me").addClass("show");
+		$(".about_section").addClass("hide");
+		$(".about_nav").show();
+	});
+	$(".arrow_prve").on("click",function(){
+		$(".about_me").removeClass("show");
+		$(".about_section").removeClass("hide");
+		$(".skill_nav").show();
+
+	});
+  });

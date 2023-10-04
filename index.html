@@ -12,78 +12,367 @@
   <meta property="og:description" content="Song Ju hyun Portfoilo" />
   <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="js/main.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
   <title>Song ju hyun</title>
+  <script>
+
+  </script>
 </head>
 
 <body>
   <header class="header">
     <h1 class="logo"><a href="/">JUHYUN</a></h1>
     <nav class="menu">
-      <ul>
+      <ul id="navbar">
         <li><a href="/">Main</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/portfoilo">Portfoilo</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfoilo">Portfoilo</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-  <div class="main"> 
-  <div class="ellipse ball1"></div>
-  <div class="ellipse ball2"></div>
- </div>
-    <p>  I am a <span class="adjective">creative</span>
-    <span class="regular">and never-give-up</span> 
-    <span class="job">developer.</span></p>
-      <p class="arrow"><img src="img/Arrow.png" alt="스크롤바"></p>
+    <div class="main">
+      <div class="ellipse ball1"></div>
+      <div class="ellipse ball2"></div>
+    </div>
+    <p> I am a <span class="adjective">creative</span>
+      <span class="regular">and never-give-up</span>
+      <span class="job">developer.</span>
+    </p>
+    <p class="arrow"><img src="img/Arrow.png" alt="스크롤바"></p>
+    <figure><img src="img/Oval.png" class="oval"></figure>
+    <span class="oval_cercle"></span>
   </main>
-  <section id="about">
-    <h2>About</h2>
-    <ul>
-      <li><span>Skil</span>: html, css, javasrcript, xd, figma</li>
-      <li><span>Skil</span>: camping </li>
-      <li><span>Skil</span>: ENFJ or INFJ</li>
-    </ul>
-    <figure class="profilbox">
-      <img src="img/juhyun.png" alt="not me" class="profil">
-      <figcaption class="rotatetext">
-        <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="150" viewBox="0 0 260 260">
-          <defs>
-            <path id="textcircle" d="M130,210 a80,80 0 0,1 0,-160a80,80 0 0,1 0,160Z" transform="rotate(12,130,130)" />
-          </defs>
-          <g class="textcircle">
-            <text textLength="650" style="animation: rotate 25s linear infinite;">
-              <textPath xlink:href="#textcircle" aria-label="CSS & SVG are awesome" textLength="650">
-                ·  It's not Real · It's not Real · 
-              </textPath>
-            </text>
-          </g> 
-        </svg>
-      </figcaption>
-  </figure>
+  <section id="about" class="section">
+
+    <h2 class="section_about">About</h2>
+
+
+
+
+    <div class="about_section">
+      <h3 class="skill_nav">Skill <span class="arrow_next"></span></h3>
+      <ul class="skil">
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100px" height="100px">
+                  <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
+                  <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
+                  <path fill="#FFF"
+                    d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z" />
+                  <path fill="#EEE"
+                    d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z" />
+                </svg>
+
+                </svg>
+                <p>HTML</p>
+              </div>
+              <div class="back">
+                <p>시맨틱 마크업 및 SEO를 고려한 html 구조를 만들 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100px" height="100px"
+                  baseProfile="basic">
+                  <path
+                    d="M51.958,98c-0.58,0-1.16-0.078-1.724-0.232l-27.742-7.702c-2.593-0.72-4.495-3.004-4.735-5.685	l-6.179-69.304c-0.16-1.813,0.451-3.621,1.677-4.962C14.485,8.77,16.233,8,18.053,8h67.895c1.821,0,3.569,0.771,4.798,2.115	c1.225,1.339,1.837,3.147,1.677,4.959L86.236,84.37c-0.24,2.683-2.145,4.967-4.739,5.686l-27.803,7.709	C53.124,97.921,52.542,98,51.958,98z"
+                    opacity=".35" />
+                  <path fill="#f2f2f2"
+                    d="M49.958,96c-0.58,0-1.16-0.078-1.724-0.232l-27.742-7.702c-2.593-0.72-4.495-3.004-4.735-5.685	L9.578,13.077c-0.16-1.813,0.451-3.621,1.677-4.962C12.485,6.77,14.233,6,16.053,6h67.895c1.821,0,3.569,0.771,4.798,2.115	c1.225,1.339,1.837,3.147,1.677,4.959L84.236,82.37c-0.24,2.683-2.145,4.967-4.739,5.686l-27.803,7.709	C51.124,95.921,50.542,96,49.958,96z" />
+                  <polygon fill="#2b59a1" points="83.947,12.5 77.762,81.792 49.958,89.5 22.231,81.803 16.053,12.5" />
+                  <path fill="#40396e"
+                    d="M49.958,91c-0.135,0-0.27-0.019-0.401-0.055L21.83,83.249c-0.602-0.167-1.037-0.689-1.093-1.312	l-6.179-69.303c-0.037-0.419,0.104-0.835,0.388-1.146C15.23,11.177,15.632,11,16.053,11h67.895c0.421,0,0.822,0.177,1.106,0.488	c0.284,0.311,0.425,0.726,0.388,1.146l-6.186,69.292c-0.056,0.622-0.491,1.145-1.094,1.312l-27.804,7.709	C50.228,90.982,50.093,91,49.958,91z M23.634,80.635l26.324,7.309l26.402-7.32L82.308,14H17.692L23.634,80.635z" />
+                  <polygon fill="#2785bd" points="72.467,77.38 77.771,17.957 50,17.957 50,83.608" />
+                  <polygon fill="#d9eeff" points="50,43.957 51,47.957 50,51.957 30.94,51.957 30.23,43.957" />
+                  <polygon fill="#d9eeff" points="50,26.957 51,30.957 50,34.957 29.441,34.957 28.72,26.957" />
+                  <polygon fill="#d9eeff"
+                    points="51,69.957 50,74.796 32.55,69.967 31.39,56.957 39.92,56.957 40.5,63.397 50,65.957" />
+                  <path fill="#f2f2f2"
+                    d="M50,26.957v8h11.969l-0.807,9H50c-0.009-0.002-0.008,8-0.008,8h10.485l-1.027,11.44L50,65.957v8.84	l17.4-4.83l0.12-1.44l2-22.37l0.21-2.29l1.5-16.91H50z" />
+                </svg>
+                <p>CSS</p>
+              </div>
+              <div class="back">
+                <p>flex grid를 사용하여 레이아웃 작성 및 반응형 단위와 애니메이션을 다룰 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100px" height="100px">
+                  <path fill="#ffd600" d="M6,42V6h36v36H6z" />
+                  <path fill="#000001"
+                    d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z" />
+                </svg>
+                <p>JavaScript</p>
+              </div>
+              <div class="back">
+                <p>바닐라JS에 대한 이해도와 jquery사용 가능하며 다양한 라이브러를 활용한 인터랙션을 구현가능합니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+                  <path fill="#80deea"
+                    d="M24,34C11.1,34,1,29.6,1,24c0-5.6,10.1-10,23-10c12.9,0,23,4.4,23,10C47,29.6,36.9,34,24,34z M24,16	c-12.6,0-21,4.1-21,8c0,3.9,8.4,8,21,8s21-4.1,21-8C45,20.1,36.6,16,24,16z" />
+                  <path fill="#80deea"
+                    d="M15.1,44.6c-1,0-1.8-0.2-2.6-0.7C7.6,41.1,8.9,30.2,15.3,19l0,0c3-5.2,6.7-9.6,10.3-12.4c3.9-3,7.4-3.9,9.8-2.5	c2.5,1.4,3.4,4.9,2.8,9.8c-0.6,4.6-2.6,10-5.6,15.2c-3,5.2-6.7,9.6-10.3,12.4C19.7,43.5,17.2,44.6,15.1,44.6z M32.9,5.4	c-1.6,0-3.7,0.9-6,2.7c-3.4,2.7-6.9,6.9-9.8,11.9l0,0c-6.3,10.9-6.9,20.3-3.6,22.2c1.7,1,4.5,0.1,7.6-2.3c3.4-2.7,6.9-6.9,9.8-11.9	c2.9-5,4.8-10.1,5.4-14.4c0.5-4-0.1-6.8-1.8-7.8C34,5.6,33.5,5.4,32.9,5.4z" />
+                  <path fill="#80deea"
+                    d="M33,44.6c-5,0-12.2-6.1-17.6-15.6C8.9,17.8,7.6,6.9,12.5,4.1l0,0C17.4,1.3,26.2,7.8,32.7,19	c3,5.2,5,10.6,5.6,15.2c0.7,4.9-0.3,8.3-2.8,9.8C34.7,44.4,33.9,44.6,33,44.6z M13.5,5.8c-3.3,1.9-2.7,11.3,3.6,22.2	c6.3,10.9,14.1,16.1,17.4,14.2c1.7-1,2.3-3.8,1.8-7.8c-0.6-4.3-2.5-9.4-5.4-14.4C24.6,9.1,16.8,3.9,13.5,5.8L13.5,5.8z" />
+                  <circle cx="24" cy="24" r="4" fill="#80deea" />
+                </svg>
+                <p>React</p>
+              </div>
+              <div class="back">
+                <p>react에 대한 기본 개념과 state, redux 개념에 대한 지식이 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 98 96">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" />
+                </svg>
+                <p>GIT</p>
+              </div>
+              <div class="back">
+                <p>브런치 관리와 기본적인 협업을 위한 github 사용이 가능합니다</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+                  <path fill="#ff41c8"
+                    d="M6,10c0-2.209,1.791-4,4-4h28c2.209,0,4,1.791,4,4v28c0,2.209-1.791,4-4,4H10c-2.209,0-4-1.791-4-4 V10z" />
+                  <path fill="#16020b"
+                    d="M9,9v30h30V9H9z M19.093,21.695l1.914-4.883h3.291l-3.34,7.051l3.418,7.168h-3.33l-1.953-4.971 l-1.943,4.971h-3.33l3.418-7.168l-3.35-7.051h3.291L19.093,21.695z M25.069,25.426c0-1.732,0.293-3.024,0.879-3.877 s1.438-1.279,2.559-1.279c0.813,0,1.491,0.352,2.031,1.055v-5.293h2.783v15h-2.51l-0.127-1.074c-0.566,0.847-1.296,1.27-2.188,1.27 c-1.106,0-1.951-0.423-2.534-1.27s-0.881-2.09-0.894-3.73V25.426z M27.843,26.119c0,1.042,0.11,1.77,0.332,2.183 s0.596,0.62,1.123,0.62c0.547,0,0.96-0.244,1.24-0.732v-4.824c-0.273-0.521-0.684-0.781-1.23-0.781 c-0.508,0-0.879,0.205-1.113,0.615s-0.352,1.14-0.352,2.188V26.119z" />
+                </svg>
+                <p>XD</p>
+
+              </div>
+              <div class="back">
+                <p>XD를 사용해 UI디자인 콘텐츠 디자인이 가능합니다. 플로우와 컴포넌트 관리가 가능합니다. </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+                  <path fill="#e64a19" d="M26,17h-8c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h8V17z" />
+                  <path fill="#7c4dff" d="M25,31h-7c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7V31z" />
+                  <path fill="#66bb6a"
+                    d="M18,45L18,45c-3.866,0-7-3.134-7-7v0c0-3.866,3.134-7,7-7h7v7C25,41.866,21.866,45,18,45z" />
+                  <path fill="#ff7043" d="M32,17h-7V3h7c3.866,0,7,3.134,7,7v0C39,13.866,35.866,17,32,17z" />
+                  <circle cx="32" cy="24" r="7" fill="#29b6f6" />
+                </svg>
+
+                <p>Figma</p>
+
+              </div>
+              <div class="back">
+                <p>피그마를 사용해 UI디자인 콘텐츠 디자인이 가능합니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="skill-item">
+          <div class="flip-container">
+            <div class="flipper">
+              <div class="front">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
+                  <path fill="#03A9F4"
+                    d="M6,10c0-2.209,1.791-4,4-4h28c2.209,0,4,1.791,4,4v28c0,2.209-1.791,4-4,4H10c-2.209,0-4-1.791-4-4V10z" />
+                  <path fill="#020F16"
+                    d="M20.016,19.174h-2.002v4.434h1.973c0.547,0,0.97-0.179,1.27-0.537s0.449-0.879,0.449-1.563c0-0.71-0.153-1.274-0.459-1.694S20.53,19.181,20.016,19.174z" />
+                  <path fill="#020F16"
+                    d="M9,9v30h30V9H9z M23.365,24.789C22.539,25.597,21.393,26,19.928,26h-1.914v5h-2.871V16.781h4.844c1.406,0,2.528,0.437,3.364,1.309s1.255,2.005,1.255,3.398S24.192,23.981,23.365,24.789z M32.682,30.336c-0.709,0.573-1.641,0.859-2.793,0.859c-0.775,0-1.459-0.151-2.051-0.454s-1.057-0.725-1.392-1.265s-0.503-1.123-0.503-1.748h2.627c0.014,0.481,0.125,0.843,0.337,1.084s0.558,0.361,1.04,0.361c0.742,0,1.113-0.335,1.113-1.006c0-0.234-0.112-0.451-0.337-0.649S30,27.052,29.225,26.713c-1.139-0.462-1.922-0.94-2.349-1.436s-0.64-1.11-0.64-1.846c0-0.925,0.334-1.688,1.001-2.29s1.552-0.903,2.651-0.903c1.158,0,2.086,0.3,2.783,0.898s1.045,1.403,1.045,2.412h-2.764c0-0.859-0.357-1.289-1.074-1.289c-0.293,0-0.533,0.091-0.723,0.273s-0.283,0.437-0.283,0.762c0,0.234,0.104,0.441,0.313,0.62s0.699,0.435,1.475,0.767c1.127,0.417,1.922,0.881,2.388,1.392s0.698,1.174,0.698,1.987C33.746,29.005,33.391,29.763,32.682,30.336z" />
+                </svg>
+                <p>PhotoShop</p>
+
+              </div>
+              <div class="back">
+                <p>포토샵을 활용해 상세페이지 콘텐츠 디자인 기타 디자인 작업이 가능합니다.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="about_me">
+      <h3 class="about_nav"><span class="arrow_prve"></span>About me</h3>
+      <ul>
+        <li><span>Birth</span>: 1987</li>
+        <li><span>Area</span>: Take a photo</li>
+        <li><span>Like</span>: camping </li>
+        <li><span>MBTI</span>: ENFJ </li>
+      </ul>
+      <figure class="profilbox">
+        <img src="img/juhyun.png" alt="not me" class="profil">
+        <figcaption class="rotatetext">
+          <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink" width="130"
+            height="130" viewBox="0 0 260 260">
+            <defs>
+              <path id="textcircle" d="M130,210 a80,80 0 0,1 0,-160a80,80 0 0,1 0,160Z"
+                transform="rotate(12,130,130)" />
+            </defs>
+            <g class="textcircle">
+              <text textLength="500" style="animation: rotate 25s linear infinite;">
+                <textPath xlink:href="#textcircle" aria-label="CSS & SVG are awesome" textLength="500">
+                  It's not Real · It's not Real ·
+                </textPath>
+              </text>
+            </g>
+          </svg>
+        </figcaption>
+      </figure>
+    </div>
+
   </section>
-  <section id="portfoilo">
+
+  <section id="portfoilo" class="section">
+    <figure><img src="img/Oval.png" class="oval1"></figure>
+    <span class="oval_cercle1"></span>
     <h2>Portfoilo</h2>
-    <ul>
-      <li>All</li>
+    <ul class="work">
       <li>Work</li>
-      <li>Porject</li>
+      <li class="porject">Porject</li>
     </ul>
+    <div>
+      <ul class="silder workcf">
+        <li class="panel">
+          <p class="title">ITALL </p>
+          <p class="content">잇올스파르타 홈페이지
+            PC 퍼블리싱 작업</p>
+          <a class="link" href="https://www.itall.com/suneung/Suneung_Main.asp" target="_blank">SITE VIEW</a>
+        </li>
+        <li class="panel">
+          <p class="title">ITALL </p>
+          <p class="content"> 나만의 할인 혜택
+            퍼블리싱 작업 (대화형 구조)
+          </p>
+          <a class="link" href="https://www.itall.com/suneung/direct_center/2023_Allsave.asp" target="_blank">SITE
+            VIEW</a>
+        </li>
+        <li class="panel">
+          <p class="title">OPENMINDS</p>
+          <p class="content">오픈마인즈 시스템 템플릿
+            퍼블리싱작업
+          </p>
+          <a class="link" href="http://webseed.cafe24.com/openmains/publ/index/main.html" target="_blank">SITE VIEW</a>
+        </li>
+        <li class="panel">
+          <p class="title">OPENMINDS</p>
+          <p class="content">오픈마인즈 자사 홈페이지 리뉴얼작업
+          </p>
+          <a class="link" href="http://www.omcst.com/" target="_blank">SITE VIEW</a>
+        </li>
+        <li class="panel">
+          <p class="title">GNETS</p>
+          <p class="content">그레이프네트웍스  홈페이지 제작 작업</p>
+          <a class="link" href="https://www.gnets.kr/" target="_blank">SITE VIEW</a>
+        </li>
+
+        <li class="panel">
+          <p class="title">vztour.com</p>
+          <p class="content">비존투어 그누보드로 작업(2017년도)</p>
+          <a class="link" href="http://vztour.com/" target="_blank">SITE VIEW</a>
+        </li>
+        <li class="panel">
+          <p class="title">yeosurentcar</p>
+          <p class="content">여수렌트카 그누보드로 작업(2016년도)</p>
+          <a class="link" href="http://yeosurentcar.co.kr/" target="_blank">SITE VIEW</a>
+        </li>
+        <!-- 프로젝트 부분 -->
+        <!-- <div class=" projectcf ">
+<li class="panel">
+<p class="title">marketservey  </p>
+<p class="content">데이터 파일을 사용한 설문조사 프로젝트</p>
+<a class="link" href="https://marketservey.vercel.app/" target="_blank">SITE VIEW</a>
+</li>
+<li class="panel">
+<p class="title">OMDB API</p>
+<p class="content"> ES6 문법을 사용한 영화 검색 프로젝트
+</p>
+<a class="link" href="https://movie-app-weld-xi.vercel.app/#/" target="_blank">SITE VIEW</a>
+</li>
+<li class="panel">
+<p class="title">IPad</p>
+<p class="content">아이패드 클론 사이트 프로젝트
+</p>
+<a class="link" href="https://ipad-var.vercel.app/" target="_blank">SITE VIEW</a>
+</li>
+</div> -->
+      </ul>
+
+
+    </div>
   </section>
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact</h2>
-    <div>Mail me</div>
-    <div>Let's Woke Togeter</div>
-    </section>
+    <div class="mail"><a href="mailto:thdwngusl@naver.com">Mail me</a></div>
+    <div class="lettext">Let's Woke Togeter</div>
     <footer>
       <p>©2023 All rights reserved.</p>
-      <ul>
-        <li>블로그</li>
-        <li>깃허브</li>
+      <ul class="otherlink">
+        <li><a href="https://webseed87.tistory.com/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="26"
+              height="26" viewBox="0 0 459 459">
+              <title>티스토리 로고</title>
+              <g>
+                <path
+                  d="M229.5,0C102.75,0,0,102.75,0,229.5S102.75,459,229.5,459,459,356.25,459,229.5,356.25,0,229.5,0ZM130.21,191.45a39.57,39.57,0,1,1,39.56-39.57A39.58,39.58,0,0,1,130.21,191.45ZM229.5,390a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,390Zm0-99.29a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,290.74Zm0-99.29a39.57,39.57,0,1,1,39.56-39.57A39.57,39.57,0,0,1,229.5,191.45Zm99.29,0a39.57,39.57,0,1,1,39.57-39.57A39.57,39.57,0,0,1,328.79,191.45Z"
+                  fill="#fff" />
+              </g>
+            </svg></li>
+        </a>
+        <li><a href="https://github.com/webseed87" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="26"
+              height="26" viewBox="0 0 98 96">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                fill="#fff" />
+            </svg>
+          </a> </li>
       </ul>
     </footer>
+  </section>
+
 </body>
 
 </html>
